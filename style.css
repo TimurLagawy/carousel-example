@@ -1,0 +1,69 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  cursor: pointer;
+  width: 20px;
+  font-size: 100%;
+}
+.item,
+.carousel,
+.card {
+  display: flex;
+}
+.carousel-wrapper {
+  width: 640px;
+  margin: 0 20px;
+  overflow: hidden;
+}
+.card {
+  width: 200px;
+  height: 200px;
+  background: red;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+  cursor: pointer;
+}
+.card-activated {
+  background: #ccc;
+}
+.item:first-child .card {
+  background: lightgreen;
+}
+.item:last-child .card {
+  background: lightblue;
+}
+.item {
+  gap: 20px;
+}
+.carousel {
+  position: relative;
+  left: -640px;
+}
+@keyframes move-right {
+  from {
+    left: -640px;
+  }
+  to {
+    left: -1280px;
+  }
+}
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 5s;
+}
+
+@keyframes move-left {
+  from {
+    left: -640px;
+  }
+  to {
+    left: 0px;
+  }
+}
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 5s;
+}
